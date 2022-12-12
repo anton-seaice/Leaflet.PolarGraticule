@@ -3,20 +3,25 @@
 <head>
     <meta charset="utf-8">
     <title>Leaflet Graticule</title>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.css" />
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.ie.css" />
-    <![endif]-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
+    
     <style type="text/css">
         html, body, #map { width: 100%; height: 100%; margin: 0; background: #fff; }
     </style>
 </head>
 <body>
     <div id="map"></div>
-    <script src="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet-src.js"></script>
-    <script type="text/javascript" src="lib/proj4js-compressed.js"></script>    
-    <script type="text/javascript" src="lib/proj4leaflet.js"></script>    
-    <script type="text/javascript" src="lib/countries-110m.js"></script>            
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+   integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+   crossorigin=""></script>
+   
+    <script src="https://unpkg.com/proj4leaflet@1.0.2/lib/proj4-compressed.js" integrity="sha384-R7x++v2MKcATI+D1/GJsn636xbHca492Sdpm8BD36lj5vdWB9+OUBpM1oKkrzqv9" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/proj4leaflet@1.0.2/src/proj4leaflet.js" integrity="sha384-aDnBHDK9AhLbrYhThBxEVMriFbix8Sz2059IlD3HbZhz7+WNmz+pSkOcI7MY72cE" crossorigin="anonymous"></script>
+    
+    <script src="https://unpkg.com/leaflet-textpath@1.2.3/leaflet.textpath.js" integrity="sha384-C/0WYmns+1D5bjgU7V+NnNS4KCvU+t0nKIxmkQBxo9G5jhi2tv8qAg/qd0o7ZrFa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="lib/countries-110m.js"></script>            
     <script type="text/javascript" src="../L.Graticule.js"></script>
     <script type="text/javascript">
 
@@ -30,35 +35,29 @@
         maxZoom: 5
     });
 
-    L.graticule({
-        sphere: true,
-        style: {
-            color: '#777',
-            opacity: 1,
-            fillColor: '#ccf',
-            fillOpacity: 1,
-            weight: 2
-        }      
-    }).addTo(map);
-
-    L.graticule({
-        style: {
-            color: '#777',
-            weight: 1,
-            opacity: 0.5
-        }        
-    }).addTo(map);
-
-
     L.geoJson(countries, {
         style: {
             color: '#000',
             weight: 0.5,
             opacity: 1,
-            fillColor: '#fff',
+            fillColor: '#fff' ,
             fillOpacity: 1
-        }          
+        }, 
+        zIndex:5          
     }).addTo(map);
+
+    L.graticule({
+        sphere: true,
+        style: {
+            color: '#777',
+            opacity: 1,
+            weight: 2
+        },
+        centerLonLabels: true ,
+        lngBounds:[-180,181] ,
+    }).addTo(map);
+
+   
 
     map.fitWorld();
 

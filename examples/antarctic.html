@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Leaflet Polar Graticule - Antarctic</title>
+		
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
+    
+    <style type="text/css">
+        html, body, #map { width: 100%; height: 100%; margin: 0; background: #fff; }
+    </style>
+
+</head>
+
+<body>
+		
+	
+	<div id='map'>
+		<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+   integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+   crossorigin=""></script>
+   
+    <script src="https://unpkg.com/proj4leaflet@1.0.2/lib/proj4-compressed.js" integrity="sha384-R7x++v2MKcATI+D1/GJsn636xbHca492Sdpm8BD36lj5vdWB9+OUBpM1oKkrzqv9" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/proj4leaflet@1.0.2/src/proj4leaflet.js" integrity="sha384-aDnBHDK9AhLbrYhThBxEVMriFbix8Sz2059IlD3HbZhz7+WNmz+pSkOcI7MY72cE" crossorigin="anonymous"></script>
+    
+	<script src="https://unpkg.com/leaflet-textpath@1.2.3/leaflet.textpath.js" integrity="sha384-C/0WYmns+1D5bjgU7V+NnNS4KCvU+t0nKIxmkQBxo9G5jhi2tv8qAg/qd0o7ZrFa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../L.Graticule.js"></script>
+    <script type="text/javascript">
+
+	const crs = new L.Proj.CRS('EPSG:3031', '+proj=stere +lat_0=-90 +lat_ts=-71 +lon_0=0 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs', {
+		resolutions: [16184,8192, 4096, 2048, 1024, 512, 256],
+		origin: [-4194304, 4194304],
+		bounds: L.bounds (
+		  [-4194304, -4194304],
+		  [4194304, 4194304]
+		)
+	});
+
+    var map = L.map('map', {
+        crs: crs,
+        maxZoom: 5,
+		center: [-90, 0],
+		zoom: 0,
+    });
+
+	// add the graticule
+    L.graticule({
+		intervalLat: 10,
+        intervalLng: 30,
+		latBounds: [-90,-35],
+    }).addTo(map);
+
+	//coastlines - for reference
+	L.tileLayer.wms('http://geos.polarview.aq/geoserver/wms', {
+		layers:'polarview:coastS10',
+		format:'image/png',
+		transparent:true,
+		attribution:'Polarview'
+	}).addTo(map);
+
+	</script>
+	</div>
+</body>
+
+</html>
