@@ -39,6 +39,12 @@ L.graticule({
 }).addTo(map);
 ```
 
+## Demos
+
+For <a href="https://anton-seaice.github.io/Leaflet.PolarGraticule/examples/antarctic.html"> Antarctica</a>
+
+For <a href="https://anton-seaice.github.io/Leaflet.PolarGraticule/examples/arctic.html"> Arctic</a>
+
 ## Advanced Use
 
 If you don't like how the labels are displayed, you can specify a custom display function.
