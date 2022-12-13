@@ -20,7 +20,7 @@ Create a new Graticule layer which inherits from `L.GeoJSON`. The following opti
 * `style`: [path options](http://leafletjs.com/reference.html#path-options) for
   the generated lines
 
-## Example
+### Example
 
 ```js
 // Add a basic graticule with divisions every 20 degrees
@@ -45,7 +45,17 @@ For <a href="https://anton-seaice.github.io/Leaflet.PolarGraticule/examples/anta
 
 For <a href="https://anton-seaice.github.io/Leaflet.PolarGraticule/examples/arctic.html"> Arctic</a>
 
+## Installation
+
+If you are using npm:
+
+`npm install leaflet-polar-graticule`
+
+Otherwise, its available through unpkg. In your html, add:
+
+`<script src="https://unpkg.com/leaflet-polar-graticule@0.1.1/L.Graticule.min.js" integrity="sha256-qcx0lAi/Z5A1QY1n74v2fjE4BDRHtTMyJOcdsvbRudU=" crossorigin="anonymous"></script>`
+
 ## Advanced Use
 
-If you don't like how the labels are displayed, you can specify a custom display function.
+If you don't like how the labels are displayed, you can specify a custom display function. (See onEachFeature in [L.Graticule.js](L.Graticule.js))
 
