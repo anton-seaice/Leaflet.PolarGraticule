@@ -3,7 +3,7 @@ Leaflet.Graticule
 
 Generate a graticule grid of latitude and longitude lines. The graticule inclues labels by default, and support for maps in polar projections.
 
-<a href="http://blog.thematicmapping.org/2013/07/creating-graticule-with-leaflet.html">This is heavily based on the original L.Graticule plugin</a> and labels are provided using the 
+<a href="http://blog.thematicmapping.org/2013/07/creating-graticule-with-leaflet.html">This is heavily based on the original L.Graticule plugin</a> and labels are provided using the <a href="https://github.com/makinacorpus/Leaflet.TextPath"> Leaflet Textpath</a> plugin.
 
 ## Usage
 

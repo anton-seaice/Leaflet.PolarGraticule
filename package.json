@@ -1,0 +1,36 @@
+{
+  "name": "leaflet-polar-graticule",
+  "version": "0.1.0",
+  "description": "Grid of latitidue and longitude lines, with support for polar map projections",
+  "type": "module",
+  "main": "L.Graticule.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly" : "npx rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anton-seaice/Leaflet.PolarGraticule.git"
+  },
+  "keywords": [
+    "leaflet",
+    "graticule",
+    "antarctica"
+  ],
+  "author": "Anton Steketee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anton-seaice/Leaflet.PolarGraticule/issues"
+  },
+  "homepage": "https://github.com/anton-seaice/Leaflet.PolarGraticule#readme",
+  "dependencies": {
+    "leaflet-textpath": "^1.2.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "rollup": "^3.7.3"
+  }
+}

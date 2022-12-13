@@ -1,3 +1,5 @@
+import 'leaflet-textpath' ;
+
 /*
  Graticule plugin for Leaflet powered maps.
 */
