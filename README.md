@@ -53,7 +53,7 @@ If you are using npm:
 
 Otherwise, its available through unpkg. In your html, add:
 
-`<script src="https://unpkg.com/leaflet-polar-graticule@0.1.1/L.Graticule.min.js" integrity="sha256-qcx0lAi/Z5A1QY1n74v2fjE4BDRHtTMyJOcdsvbRudU=" crossorigin="anonymous"></script>`
+`<script src="https://unpkg.com/leaflet-polar-graticule@0.1.2/L.Graticule.min.js" integrity="sha384-ZnsQFe3F+Xr0kzjaMGtAPO+41YGRanGndF7uefFEA/N87dUB4kHhq+xv7GHnWbh/" crossorigin="anonymous"></script>`
 
 ## Advanced Use
 
