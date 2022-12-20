@@ -46,10 +46,6 @@ L.Graticule = L.GeoJSON.extend({
 
     initialize: function (options) {
 
-        if (options.onEachFeature) {
-            this.options.onEachFeature = null ;
-        }
-
         L.Util.setOptions(this, options);
         this.options.style={...this.options.style, interactive:false}
         this._layers = {};
