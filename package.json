@@ -1,6 +1,6 @@
 {
   "name": "leaflet-polar-graticule",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Grid of latitidue and longitude lines, with support for polar map projections",
   "type": "module",
   "main": "L.Graticule.js",
