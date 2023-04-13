@@ -39,6 +39,16 @@ L.graticule({
 }).addTo(map);
 ```
 
+### Styling text labels
+Text labels can be styled through css using the classname "grat-labels". These are <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/text">SVG `<text>` elements</a>, so the styling is slightly different to normal `<p>` elements.
+
+e.g., in your css file, to change the labels to grey:
+```
+.grat-labels {
+  fill:gray
+}
+```
+
 ## Demos
 
 For <a href="https://anton-seaice.github.io/Leaflet.PolarGraticule/examples/antarctic.html"> Antarctica</a>
@@ -53,7 +63,7 @@ If you are using npm:
 
 Otherwise, its available through unpkg. In your html, add:
 
-`<script src="https://unpkg.com/leaflet-polar-graticule@0.1.2/L.Graticule.min.js" integrity="sha384-ZnsQFe3F+Xr0kzjaMGtAPO+41YGRanGndF7uefFEA/N87dUB4kHhq+xv7GHnWbh/" crossorigin="anonymous"></script>`
+`<script src="https://unpkg.com/leaflet-polar-graticule@0.1.3/L.Graticule.min.js" integrity="sha384-1fxJBA/Bv+18dZEiq5gGATLItj7ivCqXGZkYTv9wAtP7ECoHY69fyFMc+YUcJkrk" crossorigin="anonymous"></script>`
 
 ## Advanced Use
 
